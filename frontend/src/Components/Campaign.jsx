@@ -1,8 +1,7 @@
-import React from "react";
-import { projectImgURL, userURL } from "../Utils/constants";
+import { projectImgURL } from "../Utils/constants";
 import { GoArrowUpRight } from "react-icons/go";
 
-const Campaigns = () => {
+const Campaign = () => {
   return (
     <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       <div className="max-w-3xl mx-auto text-center mb-10 lg:mb-14">
@@ -39,7 +38,9 @@ const Campaigns = () => {
               </p>
             </div>
             <div className="mt-auto flex items-center gap-x-3">
-              <img className="size-8 rounded-full" src={userURL} alt="Avatar" />
+              <span className="inline-flex items-center justify-center size-[40px] text-sm font-semibold leading-none rounded-full bg-white/10 text-white border border-white/10">
+                LW
+              </span>
               <div>
                 <h5 className="text-sm text-gray-100">By Lauren Waller</h5>
               </div>
@@ -63,4 +64,4 @@ const Campaigns = () => {
   );
 };
 
-export default Campaigns;
+export default Campaign;
