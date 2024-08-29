@@ -9,13 +9,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const { connectMetamask, account } = useContext(MainContext);
+  const { connectMetamaskWithAccount, account } = useContext(MainContext);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  console.log("account", account);
 
   return (
     <header className="fixed top-3 inset-x-0 flex justify-center z-[9999] before:absolute before:inset-0 max-sm:mx-2 sm:before:max-w-[66rem] before:mx-auto before:rounded-full before:backdrop-blur-md before:bg-white/10">
@@ -62,7 +60,7 @@ const Navbar = () => {
             ) : (
               <button
                 className="inline-flex items-center py-2 px-4 bg-lime-500 text-white font-medium text-sm rounded-full hover:bg-lime-600 transition-colors duration-300"
-                onClick={connectMetamask}
+                onClick={connectMetamaskWithAccount}
               >
                 Connect wallet
               </button>
@@ -108,12 +106,12 @@ const Navbar = () => {
             </Link>
           ))}
 
-          {account == "" ||
+          {account === "" ||
             account === undefined ||
             (account === null && (
               <button
                 className="inline-flex items-center py-2 px-4 bg-lime-500 text-white font-medium text-sm rounded-full hover:bg-lime-600 transition-colors duration-300"
-                onClick={connectMetamask}
+                onClick={connectMetamaskWithAccount}
               >
                 Connect wallet
               </button>
