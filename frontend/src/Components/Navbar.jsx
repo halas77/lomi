@@ -51,7 +51,7 @@ const Navbar = () => {
               </a>
             ))}
             {account !== "" && account !== undefined && account !== null ? (
-              <a href="#" className="relative inline-block">
+              <a href="/my-campaigns" className="relative inline-block">
                 <img
                   className="inline-block size-[40px] rounded-full"
                   src="/user.jpg"
@@ -71,7 +71,7 @@ const Navbar = () => {
 
           <div className="flex justify-center items-center gap-2 md:hidden">
             {account !== "" && account !== undefined && account !== null && (
-              <a href="#" className="relative inline-block">
+              <a href="/my-campaigns" className="relative inline-block">
                 <img
                   className="inline-block size-[30px] rounded-full"
                   src="/user.jpg"
