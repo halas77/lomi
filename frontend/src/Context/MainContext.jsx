@@ -16,7 +16,6 @@ export const MainProvider = ({ children }) => {
       const accounts = await provider.send("eth_requestAccounts", []);
       const signer = provider.getSigner();
 
-      console.log("accounts", accounts);
       return { signer, accounts };
     } catch (error) {
       console.log("error", error);
