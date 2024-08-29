@@ -99,6 +99,7 @@ const Navbar = () => {
           {NavbarLinks.map((link, idx) => (
             <Link
               key={idx}
+              onClick={toggleMenu}
               className="text-sm font-medium text-gray-200 hover:text-lime-500 transition-colors duration-300"
               to={`${link.href}`}
             >
