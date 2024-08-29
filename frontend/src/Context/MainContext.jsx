@@ -1,6 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { checkIfWalletIsConnect, connectMetamask } from "../Utils/connectMetamask";
+import {
+  checkIfWalletIsConnect,
+  connectMetamask,
+} from "../Utils/connectMetamask";
 
 export const MainContext = createContext();
 
@@ -9,9 +12,11 @@ export const MainProvider = ({ children }) => {
 
   // connect to metamask
   const connectMetamaskWithAccount = async () => {
-    connectMetamask(setAccount);
+    const { accounts } = connectMetamask();
+    setAccount(accounts[0]);
   };
 
+  // check if wallet is connect
   useEffect(() => {
     checkIfWalletIsConnect(setAccount);
   }, []);

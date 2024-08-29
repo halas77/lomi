@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import { toast } from "react-toastify";
 
-export const connectMetamask = async (setAccount) => {
+export const connectMetamask = async () => {
   if (typeof window.ethereum === "undefined") {
     console.log("Metamask is not insatlled!");
     toast.info("Metamask is not insatlled!");
@@ -12,9 +12,7 @@ export const connectMetamask = async (setAccount) => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const accounts = await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
-
-    setAccount(accounts[0]);
-    return { signer, accounts };
+    return { accounts: accounts, signer: signer, provider: provider };
   } catch (error) {
     console.log("error", error);
   }
@@ -24,7 +22,6 @@ export const checkIfWalletIsConnect = async (setAccount) => {
   try {
     if (typeof window.ethereum === "undefined") {
       console.log("Metamask is not insatlled!");
-      toast.info("Metamask is not insatlled!");
       return;
     }
 
