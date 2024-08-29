@@ -51,11 +51,11 @@ const Navbar = () => {
             {account !== "" && account !== undefined && account !== null ? (
               <Link to={"/my-campaigns"} className="relative inline-block">
                 <img
-                  className="inline-block size-[40px] rounded-full"
+                  className="inline-block size-[35px] rounded-full"
                   src="/user.jpg"
                   alt="User Avater"
                 />
-                <span className="absolute bottom-0 end-0 block size-3 rounded-full ring-2  bg-lime-500 ring-neutral-50"></span>
+                <span className="absolute bottom-0 end-0 block size-2.5 rounded-full ring-2 bg-lime-500 ring-neutral-50"></span>
               </Link>
             ) : (
               <button
