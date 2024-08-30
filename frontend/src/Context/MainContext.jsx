@@ -14,6 +14,7 @@ export const MainProvider = ({ children }) => {
   const connectMetamaskWithAccount = async () => {
     const { accounts } = connectMetamask();
     setAccount(accounts[0]);
+    window.location.reload();
   };
 
   // check if wallet is connect

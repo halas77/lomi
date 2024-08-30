@@ -33,7 +33,6 @@ export const checkIfWalletIsConnect = async (setAccount) => {
       setAccount(accounts[0]);
     } else {
       console.log("No accounts found");
-      toast.info("No accounts found!");
     }
   } catch (error) {
     console.log(error);
