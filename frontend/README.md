@@ -1,4 +1,4 @@
-# Crowdfunding Platform
+# Lomi - Crowdfunding Platform
 
 A decentralized crowdfunding platform built on the Ethereum blockchain. This project allows users to create and contribute to campaigns securely using smart contracts, ensuring transparency and trust in the crowdfunding process.
 
