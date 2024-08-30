@@ -4,6 +4,13 @@ import {
   checkIfWalletIsConnect,
   connectMetamask,
 } from "../Utils/connectMetamask";
+import {
+  createCampaign,
+  getCampaignDetail,
+  getUserCampaigns,
+} from "../Utils/CampaignManager";
+
+import { getCampaignsDetail } from "../Utils/CampaignContract";
 
 export const MainContext = createContext();
 
@@ -27,6 +34,10 @@ export const MainProvider = ({ children }) => {
       value={{
         account,
         connectMetamaskWithAccount,
+        createCampaign,
+        getCampaignsDetail,
+        getCampaignDetail,
+        getUserCampaigns,
       }}
     >
       {children}
