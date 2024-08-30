@@ -11,8 +11,7 @@ A decentralized crowdfunding platform built on the Ethereum blockchain. This pro
 - **Track Campaigns**: View all active campaigns, including their goals, deadlines, and raised amounts.
 - **Donor Tracking**: Track who contributed to each campaign, enhancing transparency.
 
-## Getting Started
-
-To interact with the platform, deploy the contracts using Hardhat and use the provided scripts to create and manage campaigns.
+## Live demo
+https://1omi.netlify.app/
 
 
