@@ -1,3 +1,9 @@
+import abi from "./abi.json";
+
+export const ContractABI = abi.abi;
+
+export const contractAddress = "0x3fECF54cA140E583333b01f34ebA142205D0E9cF";
+
 export const NavbarLinks = [
   {
     name: "Home",

@@ -11,6 +11,7 @@ contract Campaign is Ownable {
 
     struct CampaignDetails {
         address creator;
+        string title;
         uint goal;
         uint deadline;
         uint raisedAmount;
@@ -28,10 +29,12 @@ contract Campaign is Ownable {
 
     constructor(
         address _creator,
+        string memory _title,
         uint _goal,
         uint _duration
     ) Ownable(msg.sender) {
         details.creator = _creator;
+        details.title = _title;
         details.goal = _goal;
         details.deadline = block.timestamp + _duration;
     }

@@ -15,8 +15,17 @@ contract CampaignManager {
         uint duration
     );
 
-    function createCampaign(uint _goal, uint _duration) public {
-        Campaign newCampaign = new Campaign(msg.sender, _goal, _duration);
+    function createCampaign(
+        string memory _title,
+        uint _goal,
+        uint _duration
+    ) public {
+        Campaign newCampaign = new Campaign(
+            msg.sender,
+            _title,
+            _goal,
+            _duration
+        );
         newCampaign.transferOwnership(msg.sender);
 
         campaigns.push(newCampaign);

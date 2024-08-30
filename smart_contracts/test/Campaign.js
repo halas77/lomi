@@ -19,7 +19,7 @@ describe("Campaign", () => {
   it("Should track the campaign creator", async () => {
     const { contract, owner, addr1 } = await loadFixture(deployedContract);
 
-    await contract.connect(addr1).createCampaign(ethers.parseEther("10"), 3600);
+    await contract.connect(addr1).createCampaign("test campaign", ethers.parseEther("10"), 3600);
     const campaigns = await contract.getUserCampaigns(addr1.address);
     const campaign = await ethers.getContractAt("Campaign", campaigns[0]);
     const details = await campaign.details();

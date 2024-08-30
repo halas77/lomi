@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "local": "npx hardhat ignition deploy ./ignition/modules/Campaign.js --network localhost",
-    "script": "npx hardhat run script/script.js --network localhost"
+    "script": "npx hardhat run script/script.js --network localhost",
+    "sepolia": "npx hardhat ignition deploy ./ignition/modules/Campaign.js --network sepolia"
   },
   "author": "Dawit Mellese",
   "license": "ISC",
