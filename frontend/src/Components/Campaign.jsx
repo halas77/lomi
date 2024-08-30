@@ -1,4 +1,3 @@
-import { projectImgURL } from "../Utils/constants";
 import { GoArrowUpRight } from "react-icons/go";
 
 const Campaign = () => {
@@ -23,8 +22,8 @@ const Campaign = () => {
           >
             <div className="aspect-w-16 aspect-h-11">
               <img
-                className="w-full object-cover rounded-xl "
-                src={projectImgURL}
+                className="w-full object-cover rounded-xl h-48"
+                src={"/p2.jpg"}
                 alt="Blog Image"
               />
             </div>
