@@ -15,6 +15,4 @@ A decentralized crowdfunding platform built on the Ethereum blockchain. This pro
 
 To interact with the platform, deploy the contracts using Hardhat and use the provided scripts to create and manage campaigns.
 
----
 
-Feel free to add additional sections like "Installation," "Usage," and "Contributing" as your project evolves.
