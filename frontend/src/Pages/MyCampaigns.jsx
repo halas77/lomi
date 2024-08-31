@@ -56,7 +56,7 @@ const MyCampaigns = () => {
         <>
           {!loading && campaignList.length === 0 && (
             <Placeholder
-              title={"No Campaigns Available "}
+              title={"No Campaigns Available"}
               desc={
                 "You haven't created any campaigns yet. Start by creating your first campaign to see it listed here!"
               }
