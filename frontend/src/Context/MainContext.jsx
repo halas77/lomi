@@ -27,7 +27,7 @@ export const MainProvider = ({ children }) => {
   // check if wallet is connect
   useEffect(() => {
     checkIfWalletIsConnect(setAccount);
-  }, []);
+  }, [setAccount]);
 
   return (
     <MainContext.Provider

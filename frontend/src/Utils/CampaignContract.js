@@ -21,3 +21,11 @@ export const getCampaignDetail = async (campaignContractAddress) => {
 
   return campaignDetails;
 };
+
+
+// contribute to the campaign 
+// export const contribute = async (campaignContractAddress) => {
+//   const campaignContract = await getCampaign(campaignContractAddress);
+
+//   const contribute = await campaignContract.
+// };
