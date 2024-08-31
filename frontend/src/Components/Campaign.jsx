@@ -43,7 +43,7 @@ const Campaign = () => {
           ))
         ) : (
           <>
-            {campaignList.map((campaign) => (
+            {campaignList.toReversed().map((campaign) => (
               <Link
                 key={campaign.contractAddress}
                 className="group flex flex-col h-full border hover:bg-white/10 border-white/5 0 rounded-xl p-5 backdrop-blur-md  bg-white/5"
