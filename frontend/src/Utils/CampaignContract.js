@@ -17,8 +17,6 @@ export const getCampaignDetail = async (campaignContractAddress) => {
     fundsWithdrawn: details.fundsWithdrawn,
   };
 
-  console.log(campaignDetails);
-
   return campaignDetails;
 };
 
@@ -43,8 +41,6 @@ export const contribute = async (campaignContractAddress, amount) => {
 export const getContributors = async (campaignContractAddress) => {
   const campaignContract = await getCampaign(campaignContractAddress);
   const backers = await campaignContract.getContributors();
-
-  console.log("backers....", backers);
 
   const listOfBackers = await Promise.all(
     backers.map(async (item) => {

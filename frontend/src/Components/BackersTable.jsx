@@ -16,7 +16,6 @@ const BackersTable = () => {
         setLoading(true);
         const contributors = await getContributors(id);
         setBackers(contributors);
-        console.log("contributors", contributors);
         setLoading(false);
       } catch (error) {
         setLoading(false);
