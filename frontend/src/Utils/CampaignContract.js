@@ -38,3 +38,24 @@ export const contribute = async (campaignContractAddress, amount) => {
     console.log("error", error);
   }
 };
+
+// get contributors
+export const getContributors = async (campaignContractAddress) => {
+  const campaignContract = await getCampaign(campaignContractAddress);
+  const backers = await campaignContract.getContributors();
+
+  console.log("backers....", backers);
+
+  const listOfBackers = await Promise.all(
+    backers.map(async (item) => {
+      const backer = {
+        backer: item._contributor,
+        amount: ethers.utils.formatEther(item._amount),
+      };
+
+      return backer;
+    })
+  );
+
+  return listOfBackers;
+};
