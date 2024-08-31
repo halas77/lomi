@@ -64,7 +64,7 @@ const CampaignDetail = () => {
                 <FaFlagCheckered className="text-blue-500" />{" "}
                 {/* Target icon */}
                 <p className="font-semibold">Target:</p>
-                <p> {campaign?.goal} ethers</p>
+                <p> {campaign?.goal} ether</p>
               </div>
               <div className="flex items-center gap-2">
                 <FaCalendarAlt className="text-purple-500" />{" "}
@@ -76,7 +76,7 @@ const CampaignDetail = () => {
               <div className="flex items-center gap-2">
                 <FaCoins className="text-green-500" /> {/* Raised icon */}
                 <p className="font-semibold">Raised:</p>
-                <p> {campaign?.raisedAmount} ethers</p>
+                <p> {campaign?.raisedAmount} ether</p>
               </div>
               <div className="flex items-center gap-2">
                 <FaClock className="text-red-500" /> {/* Due date icon */}
