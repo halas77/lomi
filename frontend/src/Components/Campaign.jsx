@@ -73,15 +73,15 @@ const Campaign = () => {
                     {campaign?.creator?.slice(0, 3)}
                   </span>
                   <div>
-                    <a
-                      href={`https://sepolia.etherscan.io/address/${campaign?.creator}`}
+                    <Link
+                      to={`https://sepolia.etherscan.io/address/${campaign?.creator}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-gray-100 hover:underline flex gap-1 justify-center items-start"
                     >
                       Created by {campaign?.creator.slice(0, 10)}...
                       <GoArrowUpRight />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </Link>

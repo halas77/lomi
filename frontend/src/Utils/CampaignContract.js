@@ -22,10 +22,19 @@ export const getCampaignDetail = async (campaignContractAddress) => {
   return campaignDetails;
 };
 
+// contribute to the campaign
+export const contribute = async (campaignContractAddress, amount) => {
+  try {
+    const campaignContract = await getCampaign(campaignContractAddress);
 
-// contribute to the campaign 
-// export const contribute = async (campaignContractAddress) => {
-//   const campaignContract = await getCampaign(campaignContractAddress);
+    const parsedAmount = ethers.utils.parseEther(amount.toString());
 
-//   const contribute = await campaignContract.
-// };
+    const tx = await campaignContract.contribute({
+      value: parsedAmount,
+    });
+
+    await tx.wait();
+  } catch (error) {
+    console.log("error", error);
+  }
+};
