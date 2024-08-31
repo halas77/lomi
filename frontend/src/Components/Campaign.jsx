@@ -3,13 +3,18 @@ import { GoArrowUpRight } from "react-icons/go";
 import { getCampaignsDetail } from "../Utils/CampaignManager";
 import { Link } from "react-router-dom";
 import SkeletonCard from "./SkeletonCard";
+import { useContext } from "react";
+import { MainContext } from "../Context/MainContext";
 
 const Campaign = () => {
+  const { account } = useContext(MainContext);
+
   const [campaignList, setCampaignList] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchCampaigns = async () => {
+      if (!account) return;
       try {
         setLoading(true);
         const campaigns = await getCampaignsDetail();
@@ -22,7 +27,7 @@ const Campaign = () => {
     };
 
     fetchCampaigns();
-  }, []);
+  }, [account]);
 
   return (
     <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">

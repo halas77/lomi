@@ -81,6 +81,8 @@ const BackersTable = () => {
                         <td className="px-6 py-4 whitespace-nowrap text-sm  text-neutral-200">
                           <Link
                             to={`https://sepolia.etherscan.io/address/${backer?.backer}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-blue-500 flex items-center gap-1 hover:underline"
                           >
                             See detail
