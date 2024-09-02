@@ -128,7 +128,7 @@ const CreateCampaignCard = () => {
               value={deadline}
               onChange={(e) => setDeadline(e.target.value)}
               className="py-3 px-4 block w-full rounded-lg text-sm bg-white/5 border border-white/20 text-gray-200 placeholder-gray-500 focus:border-blue-500 focus:ring-gray-600"
-              placeholder="Enter duration in sec"
+              placeholder="Enter duration in sec (1 day = 86400 sec)"
             />
             {errors.deadline && (
               <p className="text-red-500 text-sm mt-1">{errors.deadline}</p>
