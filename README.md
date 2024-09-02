@@ -10,6 +10,9 @@ A decentralized crowdfunding platform built on the Ethereum blockchain. This pro
 - **Refunds**: Contributors can claim refunds automatically if a campaign fails to meet its goal.
 - **Track Campaigns**: View all active campaigns, including their goals, deadlines, and raised amounts.
 - **Donor Tracking**: Track who contributed to each campaign, enhancing transparency.
+- **Tokenization**: Issue ERC20 tokens as rewards for contributors.
+- **Governance**: Allow contributors to vote on project decisions using their tokens.
+- **Reputation System**: Implement a system to track and display the reputation of project creators.
 
 ## Live demo
 https://1omi.netlify.app/
