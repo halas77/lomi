@@ -1,4 +1,5 @@
 import { GoArrowUpRight } from "react-icons/go";
+import { MdOutlineListAlt } from "react-icons/md";
 
 const Steps = () => {
   return (
@@ -16,12 +17,8 @@ const Steps = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:items-center">
-          <div className="aspect-w-16 aspect-h-9 lg:aspect-none">
-            <img
-              className="w-full object-cover rounded-xl lg:h-[600px]"
-              src="https://media.istockphoto.com/id/874231466/photo/young-adult-woman-walking-up-the-stairs-with-sun-sport-background.jpg?s=612x612&w=0&k=20&c=6d2vtrEvMhXNSh8TFR5hVhW_A2ZKjvOhWQhg-yLW_wk="
-              alt="Campaign Creation"
-            />
+          <div className="aspect-w-16 aspect-h-9 lg:aspect-none flex justify-center items-center ">
+            <MdOutlineListAlt size={200} className=" text-white/30" />
           </div>
           <div>
             <div className="mb-4">
