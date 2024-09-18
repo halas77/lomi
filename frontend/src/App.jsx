@@ -10,7 +10,6 @@ import HowItWorks from "./Pages/HowItWorks";
 import MyCampaigns from "./Pages/MyCampaigns";
 import ScrollToTop from "./Components/ScrollToTop";
 import Login from "./Pages/Login";
-import PrivateRoute from "./Components/PrivateRoutes";
 
 function App() {
   return (
@@ -21,15 +20,13 @@ function App() {
         <div className="min-h-screen">
           <Routes>
             <Route path="/connect-wallet" element={<Login />} />
-            <Route element={<PrivateRoute />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/create-campaign" element={<CreateCampaign />} />
-              <Route path="/campaign/:id" element={<CampaignDetail />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/campaigns" element={<Campaigns />} />
-              <Route path="/how-it-works" element={<HowItWorks />} />
-              <Route path="/my-campaigns" element={<MyCampaigns />} />
-            </Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/create-campaign" element={<CreateCampaign />} />
+            <Route path="/campaign/:id" element={<CampaignDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/campaigns" element={<Campaigns />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/my-campaigns" element={<MyCampaigns />} />
           </Routes>
         </div>
         <Footer />
