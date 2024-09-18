@@ -15,13 +15,15 @@ export const MainContext = createContext();
 
 export const MainProvider = ({ children }) => {
   const [account, setAccount] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   // connect to metamask
   const connectMetamaskWithAccount = async () => {
+    setIsLoading(true);
     const { provider } = await connectMetamask();
     const accounts = await provider.send("eth_requestAccounts", []);
     setAccount(accounts[0]);
-    window.location.reload();
+    setIsLoading(false);
   };
 
   // check if wallet is connect
@@ -33,6 +35,7 @@ export const MainProvider = ({ children }) => {
     <MainContext.Provider
       value={{
         account,
+        isLoading,
         connectMetamaskWithAccount,
         createCampaign,
         getCampaignsDetail,
